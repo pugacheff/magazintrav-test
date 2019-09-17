@@ -9,34 +9,29 @@ import org.openqa.selenium.support.ui.Select;
 
 public class BasePage {
 
-    protected WebDriver drvier ;
+    protected WebDriver driver ;
     public JavascriptExecutor jse ;
     public Select select ;
     public Actions action ;
 
-    public BasePage(WebDriver driver)
-    {
+    public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
 
-    protected static void clickButton(WebElement button)
-    {
+    protected static void clickButton(WebElement button) {
         button.click();
     }
 
-    protected static void setTextElementText(WebElement textElement , String value)
-    {
+    protected static void setTextElementText(WebElement textElement , String value) {
         textElement.sendKeys(value);
     }
 
-    public void scrollToBottom()
-
-    {
+    public void scrollToBottom() {
         jse.executeScript("scrollBy(0,2500)");
     }
 
-    public void clearText(WebElement element)
-    {
+    public void clearText(WebElement element) {
         element.clear();
     }
 
