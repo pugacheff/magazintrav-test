@@ -3,7 +3,7 @@ package runner;
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.AfterClass;
-import tests.TestBase;
+import tests.BaseTest;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,10 +16,10 @@ import java.io.IOException;
         ,monochrome = false
 )
 
-public class MainRunner extends TestBase {
+public class MainRunner extends BaseTest {
     @AfterClass
     public static void writeExtentReport() throws IOException {
-        Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\src\\main\\java\\utils\\ReportsConfig.xml"));
+        //Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\src\\main\\java\\utils\\ReportsConfig.xml"));
     }
 
 }
