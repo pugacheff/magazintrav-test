@@ -16,9 +16,9 @@ public class PaymentFormWorkSteps extends BaseTest {
     private String phone = "(927) 634-28-61";
     private String orderid = "289764";
 
-    @Допустим("^пользователь находится на главной странице сайта$")
-    public void пользователь_находится_на_главной_странице_сайта() throws Throwable {
-        driver.get("https://magazintrav.ru/");
+    @Допустим("^пользователь заходит на главную страницу (.*)$")
+    public void пользователь_находится_на_главной_странице_сайта(String baseUrl) throws Throwable {
+        driver.get(baseUrl);
         mainPage = new MainPage(driver, driverWait);
     }
 
