@@ -19,7 +19,7 @@ import java.io.IOException;
 public class MainRunner extends BaseTest {
     @AfterClass
     public static void writeExtentReport() throws IOException {
-        Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\src\\main\\java\\utils\\ReportsConfig.xml"));
+        //Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\src\\main\\java\\utils\\ReportsConfig.xml"));
     }
 
 }
