@@ -15,17 +15,17 @@ public class MasterHooks extends BaseTest {
 
     @After
     public void tearDown(Scenario scenario) throws InterruptedException {
-        try{
-            if (driver != null && scenario.isFailed()){
+        try {
+            if (driver != null && scenario.isFailed()) {
                 Helper.captureScreenshot(driver, scenario.getId() + scenario.getName());
                 driver.manage().deleteAllCookies();
                 driver.quit();
             }
-            if(driver != null){
+            if(driver != null) {
                 driver.manage().deleteAllCookies();
                 driver.quit();
             }
-        }catch(Exception e){
+        } catch(Exception e){
             System.out.println("tearDown" + e.getMessage());
         }
     }
