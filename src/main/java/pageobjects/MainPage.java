@@ -31,6 +31,9 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//div[@class='head']//img[@alt='Магазин трав Русские Корни']")
     private WebElement imgHeaderIcons;
 
+    @FindBy(xpath = "//section//*[@href=\"faq\"]")
+    private WebElement faqButton;
+
     public void typeWordForSearch(String word) {
         searchLabel.click();
         bigSearchInputField.sendKeys(word);
@@ -61,5 +64,10 @@ public class MainPage extends BasePage{
     public PayOrderOnlinePage clickBtnPayForYourOrderOnline() {
         btnPayForYourOrderOnline.click();
         return new PayOrderOnlinePage(driver, driverWait);
+    }
+
+    public FaqPage openFaqPage(){
+        faqButton.click();
+        return new FaqPage(driver);
     }
 }

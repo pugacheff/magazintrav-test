@@ -5,6 +5,7 @@ import cucumber.api.java.ru.Допустим;
 import cucumber.api.java.ru.Когда;
 import cucumber.api.java.ru.Тогда;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import pageobjects.MainPage;
 import pageobjects.ThankPage;
 import tests.BaseTest;
@@ -30,21 +31,18 @@ public class StepsThanks extends BaseTest {
 
     }
 
-    @Когда("^заполняет все поля$")
-    public void заполняет_все_поля() throws Throwable {
+    @Когда("^заполняет сообщение ордер мэйл$")
+    public void заполняет_сообщение_ордер_мэйл() throws Throwable {
         thankPage.inputMessage(msg).inputOrder(ordr).inputEmail(mail);
-
     }
 
     @Когда("^нажимает на кнопку отправить$")
     public void нажимает_на_кнопку_отправить() throws Throwable {
         thankPage.sendComplaints();
-
     }
 
     @Тогда("^должен отобразиться фрейм успешно$")
     public void должен_отобразиться_фрейм_успешно() throws Throwable {
         thankPage.waitingForSuccess();
-
     }
 }

@@ -1,5 +1,6 @@
 package pageobjects;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,7 +58,6 @@ public class ThankPage extends BasePage {
 
     public ThankPage waitingForSuccess() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-
         wait.until(ExpectedConditions.visibilityOf(success));
         return this;
     }
