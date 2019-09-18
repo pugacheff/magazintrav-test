@@ -21,13 +21,14 @@ public class SearchParcelSteps extends BaseTest {
     @Допустим("^пользователь на главной странице$")
     public void пользователь_на_главной_странице() throws Throwable {
         driver.get("https://magazintrav.ru/");
-        searchParcel = PageFactory.initElements(driver, SearchParcel.class);
+        searchParcel = new SearchParcel(driver);
     }
 
     @Когда("^пользователь нажимает на кнопку Помощь$")
     public void пользователь_нажимает_на_кнопку_Помощь() throws Throwable {
         searchParcel.helpButton();
     }
+
     @И("^выбирает пункт где посылка$")
     public void выбирает_пункт_где_посылка() throws Throwable {
         searchParcel.whereParcelButton();

@@ -8,13 +8,14 @@ public class SearchParcel extends BasePage {
 
     @FindBy(xpath ="//*[text()='Помощь']")
     private WebElement helpBtn;
+
     @FindBy(xpath ="//*[text()='Помощь']//..//*[text()='Где посылка?']")
     private WebElement whereParcel;
 
     public SearchParcel(WebDriver driver) {
         super (driver);
-        this.driver = driver;
     }
+
     public SearchParcel helpButton(){
         helpBtn.click();
         return this;
