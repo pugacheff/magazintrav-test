@@ -9,13 +9,6 @@ import java.util.List;
 
 public class MainPage extends BasePage{
 
-    public MainPage(WebDriver driver, WebDriverWait driverWait) {
-        super(driver, driverWait);
-    }
-
-    @FindBy(xpath = "//*[@href=\"/vyiskazat_blagodarnost\"]/*[@alt=\"Высказать Благодарность\"]")
-    WebElement thankButton;
-
     @FindBy(xpath = "//input[@type='search']")
     private WebElement searchLabel;
 
@@ -31,8 +24,16 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//div[@class='head']//img[@alt='Магазин трав Русские Корни']")
     private WebElement imgHeaderIcons;
 
-    @FindBy(xpath = "//section//*[@href=\"faq\"]")
-    private WebElement faqButton;
+    @FindBy(xpath = "//a[@href='#callbackmodal']")
+    private WebElement btnRequestCall;
+
+    public MainPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public MainPage(WebDriver driver, WebDriverWait driverWait) {
+        super(driver, driverWait);
+    }
 
     public void typeWordForSearch(String word) {
         searchLabel.click();
@@ -48,9 +49,18 @@ public class MainPage extends BasePage{
         return false;
     }
 
-    public ThankPage openThankPage() {
-        thankButton.click();
-        return new ThankPage(driver);
+    public PayOrderOnlinePage clickBtnPayForYourOrderOnline() {
+        btnPayForYourOrderOnline.click();
+        return new PayOrderOnlinePage(driver, driverWait);
+    }
+
+    public RequestCallPage clickRequestCall() {
+        btnRequestCall.click();
+        return new RequestCallPage(driver, driverWait);
+    }
+
+    public WebElement getBtnRequestCall() {
+        return btnRequestCall;
     }
 
     public WebElement getBtnPayForYourOrderOnline() {
@@ -61,13 +71,4 @@ public class MainPage extends BasePage{
         return imgHeaderIcons;
     }
 
-    public PayOrderOnlinePage clickBtnPayForYourOrderOnline() {
-        btnPayForYourOrderOnline.click();
-        return new PayOrderOnlinePage(driver, driverWait);
-    }
-
-    public FaqPage openFaqPage(){
-        faqButton.click();
-        return new FaqPage(driver);
-    }
 }
