@@ -14,7 +14,7 @@ public class SearchInputFieldSteps extends BaseTest {
     @Пусть("^пользователь находится на главной странице (.*)$")
     public void пользователь_находится_на_главной_странице(String baseUrl) throws Throwable {
         driver.get(baseUrl);
-        mainPage = new MainPage(driver);
+        mainPage = new MainPage(driver, driverWait);
     }
 
 
