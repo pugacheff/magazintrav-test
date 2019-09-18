@@ -77,4 +77,5 @@ public class ThankPage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(success));
         return this;
     }
+
 }

@@ -39,8 +39,15 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//section[@class='bottom_rk']//a[@href='faq']")
     private WebElement faqLink;
 
+    @FindBy(xpath = "//a[@href='#callbackmodal']")
+    private WebElement btnRequestCall;
+
     public MainPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
+    }
+
+    public MainPage(WebDriver driver) {
+        super(driver);
     }
 
     public void typeWordForSearch(String word) {
@@ -94,4 +101,10 @@ public class MainPage extends BasePage{
         faqLink.click();
         return new FaqPage(driver);
     }
+
+    public RequestCallPage clickRequestCall() {
+        btnRequestCall.click();
+        return new RequestCallPage(driver, driverWait);
+    }
+
 }

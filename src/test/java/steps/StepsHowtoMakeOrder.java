@@ -27,4 +27,5 @@ public class StepsHowtoMakeOrder extends BaseTest {
     public void открывается_подменб_с_информацией() throws Throwable {
         Assert.assertTrue(faqPage.checkVisible());
     }
+
 }

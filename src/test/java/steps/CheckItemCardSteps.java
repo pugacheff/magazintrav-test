@@ -12,7 +12,7 @@ public class CheckItemCardSteps extends BaseTest {
     private final String ITEM_PAGE_URL = "https://magazintrav.ru/spirulina_tab";
     private final String CHANGE_ITEM_AMOUNT_TEST = "5";
 
-   @Допустим("^пользователь выбрал товар и находится на странице товара$")
+    @Допустим("^пользователь выбрал товар и находится на странице товара$")
     public void пользователь_выбрал_товар_и_находится_на_странице_товара() {
        driver.get(ITEM_PAGE_URL);
        itemPage = new ItemPage(driver);
@@ -50,4 +50,5 @@ public class CheckItemCardSteps extends BaseTest {
         itemPage.getItemAmountInputField().sendKeys(CHANGE_ITEM_AMOUNT_TEST);
         Assert.assertEquals(itemPage.getItemAmountInputField().getAttribute("value"), CHANGE_ITEM_AMOUNT_TEST);
     }
+
 }

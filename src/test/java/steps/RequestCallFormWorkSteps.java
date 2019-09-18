@@ -42,7 +42,7 @@ public class RequestCallFormWorkSteps extends BaseTest {
         Assert.assertTrue(mainPage.getImgHeaderIcons().isDisplayed());
     }
 
-    @Когда("^пользователь вновь нажимает на кнопку 'заказать зфонок'$")
+    @Когда("^пользователь вновь нажимает на кнопку 'заказать звонок'$")
     public void пользователь_вновь_нажимает_на_кнопку_заказать_зфонок() throws Throwable {
         requestCallPage = mainPage.clickRequestCall();
     }
@@ -65,7 +65,6 @@ public class RequestCallFormWorkSteps extends BaseTest {
         Assert.assertTrue(requestCallPage.getBtnSubmit().isDisplayed());
 
         requestCallPage.waitElementToBeClickable(requestCallPage.getBtnSubmit());
-
     }
 
 }

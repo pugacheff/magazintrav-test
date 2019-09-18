@@ -24,4 +24,5 @@ public class FaqPage extends BasePage{
     public boolean checkVisible(){
         return textForTest.isDisplayed();
     }
+
 }

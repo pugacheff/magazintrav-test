@@ -74,4 +74,5 @@ public class QuickViewPage extends BasePage {
         clickButton(quantityProductCheckbox);
         return this;
     }
+
 }

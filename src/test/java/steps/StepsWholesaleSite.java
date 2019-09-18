@@ -1,10 +1,7 @@
 package steps;
 
-import cucumber.api.java.ru.Допустим;
 import cucumber.api.java.ru.Когда;
 import cucumber.api.java.ru.Тогда;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageobjects.MainPage;
 import pageobjects.WholesalePage;

@@ -8,6 +8,7 @@ import pageobjects.ThankPage;
 import tests.BaseTest;
 
 public class StepsThanks extends BaseTest {
+
     MainPage mainPage;
     ThankPage thankPage;
 
@@ -25,7 +26,6 @@ public class StepsThanks extends BaseTest {
     @Когда("^пользователь выбирает за что хочет похвалить$")
     public void пользователь_выбирает_за_что_хочет_похвалить() throws Throwable {
         thankPage.openComplaint().selectComplaint();
-
     }
 
     @Когда("^заполняет сообщение ордер мэйл$")
@@ -42,4 +42,5 @@ public class StepsThanks extends BaseTest {
     public void должен_отобразиться_фрейм_успешно() throws Throwable {
         thankPage.waitingForSuccess();
     }
+
 }

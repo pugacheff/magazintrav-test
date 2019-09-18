@@ -25,4 +25,5 @@ public class SearchParcel extends BasePage {
         whereParcel.click();
         return this;
     }
+
 }
