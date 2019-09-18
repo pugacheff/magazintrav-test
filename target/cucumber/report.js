@@ -13,7 +13,7 @@ formatter.feature({
   "keyword": "Функция"
 });
 formatter.before({
-  "duration": 3994489300,
+  "duration": 4000763800,
   "status": "passed"
 });
 formatter.background({
@@ -32,7 +32,7 @@ formatter.match({
   "location": "CheckItemCardSteps.пользователь_выбрал_товар_и_находится_на_странице_товара()"
 });
 formatter.result({
-  "duration": 2851684200,
+  "duration": 3014356300,
   "status": "passed"
 });
 formatter.scenario({
@@ -72,39 +72,40 @@ formatter.match({
   "location": "CheckItemCardSteps.присутствует_заголовок_товара()"
 });
 formatter.result({
-  "duration": 44582400,
+  "duration": 73088199,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckItemCardSteps.отображается_изображение_товара()"
 });
 formatter.result({
-  "duration": 52303700,
+  "duration": 42755101,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckItemCardSteps.отбражается_стоимость_товара()"
 });
 formatter.result({
-  "duration": 25881900,
+  "duration": 33440300,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckItemCardSteps.есть_кнопка_добавить_в_корзину()"
 });
 formatter.result({
-  "duration": 26892300,
+  "duration": 338271901,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckItemCardSteps.имеется_возможность_изменять_количество_товара()"
 });
 formatter.result({
-  "duration": 498891000,
-  "status": "passed"
+  "duration": 304364000,
+  "error_message": "org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //*[contains(text(),\u0027Наличие\u0027 because of the following error:\nSyntaxError: Failed to execute \u0027evaluate\u0027 on \u0027Document\u0027: The string \u0027//*[contains(text(),\u0027Наличие\u0027\u0027 is not a valid XPath expression.\n  (Session info: chrome\u003d77.0.3865.75)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027MSK2-LEARNING-0\u0027, ip: \u002710.0.75.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\\Users\\student\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:41808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: a56600eb48351fc90bb76ed595108145\n*** Element info: {Using\u003dxpath, value\u003d//*[contains(text(),\u0027Наличие\u0027}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat steps.CheckItemCardSteps.имеется_возможность_изменять_количество_товара(CheckItemCardSteps.java:55)\r\n\tat ✽.К тому же имеется возможность изменять количество товара(CheckItemCard.feature:12)\r\n",
+  "status": "failed"
 });
 formatter.after({
-  "duration": 797955100,
+  "duration": 1248934400,
   "status": "passed"
 });
 formatter.uri("SearchInputField.feature");
@@ -122,7 +123,7 @@ formatter.feature({
   "keyword": "Функция"
 });
 formatter.before({
-  "duration": 3581418400,
+  "duration": 3285903999,
   "status": "passed"
 });
 formatter.background({
@@ -145,166 +146,4 @@ formatter.match({
     }
   ],
   "location": "SearchInputFieldSteps.пользователь_находится_на_главной_странице(String)"
-});
-formatter.result({
-  "duration": 1856790400,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 8,
-  "name": "Поиск продукта \u0027Арония\u0027 через строку поиска",
-  "description": "",
-  "id": "проверка-работы-строки-поиска;поиск-продукта-\u0027арония\u0027-через-строку-поиска",
-  "type": "scenario",
-  "keyword": "Сценарий"
-});
-formatter.step({
-  "line": 9,
-  "name": "пользователь вводит в строку поиска Арония",
-  "keyword": "Когда "
-});
-formatter.step({
-  "line": 10,
-  "name": "продукт Арония отображается на экране",
-  "keyword": "Тогда "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Арония",
-      "offset": 36
-    }
-  ],
-  "location": "SearchInputFieldSteps.пользователь_вводит_в_строку_поиска_Арония(String)"
-});
-formatter.result({
-  "duration": 250627900,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Арония",
-      "offset": 8
-    }
-  ],
-  "location": "SearchInputFieldSteps.продукт_Арония_отображается_на_экране(String)"
-});
-formatter.result({
-  "duration": 404318700,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 700221400,
-  "status": "passed"
-});
-formatter.uri("UserRegistration.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "# language: ru"
-    }
-  ],
-  "line": 3,
-  "name": "Отправка жалобы руководству",
-  "description": "",
-  "id": "отправка-жалобы-руководству",
-  "keyword": "Функция"
-});
-formatter.before({
-  "duration": 3248425800,
-  "status": "passed"
-});
-formatter.background({
-  "line": 5,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Предыстория"
-});
-formatter.step({
-  "line": 6,
-  "name": "пользователь находится на главной странице",
-  "keyword": "Допустим "
-});
-formatter.match({
-  "location": "StepsLeaveComplaint.пользователь_находится_на_главной_странице()"
-});
-formatter.result({
-  "duration": 1595518900,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 8,
-  "name": "позитивная отправка жалобы руководству",
-  "description": "",
-  "id": "отправка-жалобы-руководству;позитивная-отправка-жалобы-руководству",
-  "type": "scenario",
-  "keyword": "Сценарий"
-});
-formatter.step({
-  "line": 9,
-  "name": "нажимает на кнопку Помощь",
-  "keyword": "Когда "
-});
-formatter.step({
-  "line": 10,
-  "name": "выбирает пункт службы контроля качества",
-  "keyword": "И "
-});
-formatter.step({
-  "line": 11,
-  "name": "пользователь нажимает на кнопку оставить жалобу",
-  "keyword": "Тогда "
-});
-formatter.step({
-  "line": 12,
-  "name": "заполняет все поля",
-  "keyword": "И "
-});
-formatter.step({
-  "line": 13,
-  "name": "пользователь нажимает кнопку отправить",
-  "keyword": "Тогда "
-});
-formatter.match({
-  "location": "StepsLeaveComplaint.нажимает_на_кнопку_Помощь()"
-});
-formatter.result({
-  "duration": 119172200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsLeaveComplaint.выбирает_пункт_службы_контроля_качества()"
-});
-formatter.result({
-  "duration": 655062200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsLeaveComplaint.пользователь_нажимает_на_кнопку_оставить_жалобу()"
-});
-formatter.result({
-  "duration": 760652000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsLeaveComplaint.заполняет_все_поля()"
-});
-formatter.result({
-  "duration": 795416800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsLeaveComplaint.пользователь_нажимает_кнопку_отправить()"
-});
-formatter.result({
-  "duration": 93574700,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 752232200,
-  "status": "passed"
-});
 });
