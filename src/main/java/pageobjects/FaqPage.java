@@ -10,10 +10,10 @@ public class FaqPage extends BasePage{
         super(driver);
     }
 
-    @FindBy(xpath = "//*[contains(text(), 'Как сделать заказ?')]")
+    @FindBy(xpath = "//div[@class='title_faq' and contains(text(), 'Как сделать заказ?')]")
     WebElement howToOrderOpen;
 
-    @FindBy(xpath = "//*[contains(text(), 'Как купить и как получить покупку?')]")
+    @FindBy(xpath = "//div[@class='hidden_block']/h2[contains(text(), 'Как купить и как получить покупку?')]")
     WebElement textForTest;
 
     public FaqPage openMenu(){
@@ -22,7 +22,6 @@ public class FaqPage extends BasePage{
     }
 
     public boolean checkVisible(){
-
         return textForTest.isDisplayed();
     }
 }

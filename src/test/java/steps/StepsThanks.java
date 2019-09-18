@@ -11,9 +11,9 @@ public class StepsThanks extends BaseTest {
     MainPage mainPage;
     ThankPage thankPage;
 
-    String msg = " HI!";
-    String ordr = "HELLO!";
-    String mail = "MAIL";
+    private final String MSG = "qqqqqq";
+    private final String ORDER = "wwwwwwwww";
+    private final String MAIL = "eeeeeeeeeee";
 
     @Допустим("^пользователь нажал кнопку сказать спасибо$")
     public void пользователь_нажал_кнопку_сказать_спасибо() throws Throwable {
@@ -24,13 +24,13 @@ public class StepsThanks extends BaseTest {
 
     @Когда("^пользователь выбирает за что хочет похвалить$")
     public void пользователь_выбирает_за_что_хочет_похвалить() throws Throwable {
-        thankPage.selectComplaint();
+        thankPage.openComplaint().selectComplaint();
 
     }
 
     @Когда("^заполняет сообщение ордер мэйл$")
     public void заполняет_сообщение_ордер_мэйл() throws Throwable {
-        thankPage.inputMessage(msg).inputOrder(ordr).inputEmail(mail);
+        thankPage.inputMessage(MSG).inputOrder(ORDER).inputEmail(MAIL);
     }
 
     @Когда("^нажимает на кнопку отправить$")
