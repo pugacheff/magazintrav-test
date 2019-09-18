@@ -19,6 +19,4 @@ public class ServicePage extends BasePage {
         clickButton(complaintBtn);
         return PageFactory.initElements(drvier, ComplaintPage.class);
     }
-
-
 }

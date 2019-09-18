@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class ComplaintPage extends BasePage {
 
-
     @FindBy(xpath = "//*[@id='complaint_select']")
     private WebElement causeCheckbox;
 
@@ -81,6 +80,4 @@ public class ComplaintPage extends BasePage {
         clickButton(sendComplaintBtn);
         return this;
     }
-
-
 }
