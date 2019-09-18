@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ItemPage {
+public class ItemPage extends BasePage {
 
     @FindBy(xpath = "//h1[@itemprop='name']")
     WebElement itemName;
@@ -21,10 +21,8 @@ public class ItemPage {
     @FindBy(xpath = "//div[@class='cart_add']//input[@name='count']")
     WebElement itemAmountInputField;
 
-    private final WebDriver driver;
-
     public ItemPage(final WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public WebElement getItemName() {

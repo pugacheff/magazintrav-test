@@ -27,12 +27,11 @@ public class ComplaintPage extends BasePage {
     @FindBy(xpath = "//*[@id='email']")
     private WebElement emailForm;
 
-    @FindBy(xpath = "//*[@class='b-yellow__btn']")
+    @FindBy(xpath = "//button[contains(@class, 'b-yellow__btn')]")
     private WebElement sendComplaintBtn;
 
     public ComplaintPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
     }
 
     private ComplaintPage clickCauseCheckbox() {
@@ -77,7 +76,7 @@ public class ComplaintPage extends BasePage {
     }
 
     public ComplaintPage sendClick() {
-        clickButton(sendComplaintBtn);
+        sendComplaintBtn.submit();
         return this;
     }
 }

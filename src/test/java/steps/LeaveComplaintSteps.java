@@ -9,7 +9,7 @@ import pageobjects.HomePage;
 import pageobjects.ServicePage;
 import tests.BaseTest;
 
-public class StepsLeaveComplaint extends BaseTest {
+public class LeaveComplaintSteps extends BaseTest {
 
     HomePage homePage;
     ServicePage servicePage;
