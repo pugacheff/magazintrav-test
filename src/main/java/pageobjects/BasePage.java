@@ -6,16 +6,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
     protected WebDriver driver ;
+    protected WebDriverWait driverWait;
     public JavascriptExecutor jse ;
     public Select select ;
     public Actions action ;
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
+
+    public BasePage(WebDriver driver, WebDriverWait driverWait) {
+        PageFactory.initElements(driver, this);
+        this.driverWait = driverWait;
         this.driver = driver;
     }
 
