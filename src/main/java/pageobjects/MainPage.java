@@ -9,6 +9,13 @@ import java.util.List;
 
 public class MainPage extends BasePage{
 
+    public MainPage(WebDriver driver, WebDriverWait driverWait) {
+        super(driver, driverWait);
+    }
+
+    @FindBy(xpath = "//*[@href=\"/vyiskazat_blagodarnost\"]/*[@alt=\"Высказать Благодарность\"]")
+    WebElement thankButton;
+
     @FindBy(xpath = "//input[@type='search']")
     private WebElement searchLabel;
 
@@ -24,14 +31,6 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//div[@class='head']//img[@alt='Магазин трав Русские Корни']")
     private WebElement imgHeaderIcons;
 
-    public MainPage(WebDriver driver) {
-        super(driver);
-    }
-
-    public MainPage(WebDriver driver, WebDriverWait driverWait) {
-        super(driver, driverWait);
-    }
-
     public void typeWordForSearch(String word) {
         searchLabel.click();
         bigSearchInputField.sendKeys(word);
@@ -46,6 +45,11 @@ public class MainPage extends BasePage{
         return false;
     }
 
+    public ThankPage openThankPage() {
+        thankButton.click();
+        return new ThankPage(driver);
+    }
+
     public WebElement getBtnPayForYourOrderOnline() {
         return btnPayForYourOrderOnline;
     }
@@ -58,5 +62,4 @@ public class MainPage extends BasePage{
         btnPayForYourOrderOnline.click();
         return new PayOrderOnlinePage(driver, driverWait);
     }
-
 }
