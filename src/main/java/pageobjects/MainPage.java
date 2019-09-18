@@ -12,6 +12,15 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//img[@alt='Высказать Благодарность']")
     private WebElement thankButton;
 
+    @FindBy(xpath ="//*[text()='Помощь']")
+    private WebElement helpMenuBtn;
+
+    @FindBy(xpath ="//*[text()='Помощь']//..//*[text()='Служба контроля качества']")
+    private WebElement serviceBtn;
+
+    @FindBy(xpath = "//*[@href='https://opt.magazintrav.ru/']")
+    private WebElement wholesaleBtn;
+
     @FindBy(xpath = "//input[@type='search']")
     private WebElement searchLabel;
 
@@ -64,6 +73,21 @@ public class MainPage extends BasePage{
     public PayOrderOnlinePage clickBtnPayForYourOrderOnline() {
         btnPayForYourOrderOnline.click();
         return new PayOrderOnlinePage(driver, driverWait);
+    }
+
+    public MainPage clickMenuHelp() {
+        clickButton(helpMenuBtn);
+        return this;
+    }
+
+    public ServicePage clickService() {
+        clickButton(serviceBtn);
+        return new ServicePage(driver);
+    }
+
+    public WholesalePage clickWholesaleBtn() {
+        clickButton(wholesaleBtn);
+        return new WholesalePage(driver);
     }
 
     public FaqPage openFaqPage(){
