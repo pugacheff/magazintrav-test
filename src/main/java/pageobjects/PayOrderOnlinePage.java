@@ -21,6 +21,10 @@ public class PayOrderOnlinePage extends BasePage {
     @FindBy(xpath = "//div[@id='online_payment']//button[@type='submit']")
     private WebElement btnSubmit;
 
+    public PayOrderOnlinePage(WebDriver driver) {
+        super(driver);
+    }
+
     public PayOrderOnlinePage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }

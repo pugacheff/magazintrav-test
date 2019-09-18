@@ -24,6 +24,10 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//div[@class='head']//img[@alt='Магазин трав Русские Корни']")
     private WebElement imgHeaderIcons;
 
+    public MainPage(WebDriver driver) {
+        super(driver);
+    }
+
     public MainPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }

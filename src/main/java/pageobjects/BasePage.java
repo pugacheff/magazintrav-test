@@ -16,6 +16,11 @@ public class BasePage {
     public Select select ;
     public Actions action ;
 
+    public BasePage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
+
     public BasePage(WebDriver driver, WebDriverWait driverWait) {
         PageFactory.initElements(driver, this);
         this.driverWait = driverWait;
