@@ -13,8 +13,8 @@ public class PaymentFormWorkSteps extends BaseTest {
     private MainPage mainPage;
     private PayOrderOnlinePage payOrderOnlinePage;
 
-    private String phone = "(927) 634-28-61";
-    private String orderid = "289764";
+    private String PHONE = "(927) 634-28-61";
+    private String ORDER_ID = "289764";
 
     @Допустим("^пользователь заходит на главную страницу (.*)$")
     public void пользователь_заходит_на_главную_страницу_сайта(String baseUrl) throws Throwable {
@@ -35,7 +35,7 @@ public class PaymentFormWorkSteps extends BaseTest {
 
     @Когда("^пользователь заполняет все поля ввода$")
     public void пользователь_заполняет_все_поля_ввода() throws Throwable {
-        payOrderOnlinePage.sendKeysFieldForm(phone, orderid);
+        payOrderOnlinePage.sendKeysFieldForm(PHONE, ORDER_ID);
     }
 
     @Когда("^нажимает кнопку чтобы закрыть форму$")
@@ -59,8 +59,8 @@ public class PaymentFormWorkSteps extends BaseTest {
         String valueInputPhone = payOrderOnlinePage.getInputPhone().getAttribute("value");
         String valueInputOrderid = payOrderOnlinePage.getInputOrderid().getAttribute("value");
 
-        Assert.assertEquals(valueInputPhone, "8 ".concat(phone));
-        Assert.assertEquals(valueInputOrderid, orderid);
+        Assert.assertEquals(valueInputPhone, "8 ".concat(PHONE));
+        Assert.assertEquals(valueInputOrderid, ORDER_ID);
     }
 
 }
