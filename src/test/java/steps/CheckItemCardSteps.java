@@ -1,23 +1,21 @@
 package steps;
 
 import cucumber.api.java.ru.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ByIdOrName;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import pageobjects.ItemPage;
 import tests.BaseTest;
 
 public class CheckItemCardSteps extends BaseTest {
 
-    private ItemPage itemPage = PageFactory.initElements(driver, ItemPage.class);
+    private ItemPage itemPage;
 
-    private final String itemPageUrl = "https://magazintrav.ru/spirulina_tab";
-    private final String changeItemAmountTest = "5";
+    private final String ITEM_PAGE_URL = "https://magazintrav.ru/spirulina_tab";
+    private final String CHANGE_ITEM_AMOUNT_TEST = "5";
 
    @Допустим("^пользователь выбрал товар и находится на странице товара$")
     public void пользователь_выбрал_товар_и_находится_на_странице_товара() {
-       driver.get(itemPageUrl);
+       driver.get(ITEM_PAGE_URL);
+       itemPage = new ItemPage(driver);
     }
 
     @Если("^присутствует заголовок товара$")
@@ -49,7 +47,7 @@ public class CheckItemCardSteps extends BaseTest {
         itemPage.getItemAmountMinus().click();
 
         itemPage.getItemAmountInputField().clear();
-        itemPage.getItemAmountInputField().sendKeys(changeItemAmountTest);
-        Assert.assertEquals(itemPage.getItemAmountInputField().getAttribute("value"), changeItemAmountTest);
+        itemPage.getItemAmountInputField().sendKeys(CHANGE_ITEM_AMOUNT_TEST);
+        Assert.assertEquals(itemPage.getItemAmountInputField().getAttribute("value"), CHANGE_ITEM_AMOUNT_TEST);
     }
 }

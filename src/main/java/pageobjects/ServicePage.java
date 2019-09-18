@@ -3,7 +3,6 @@ package pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class ServicePage extends BasePage {
 
@@ -12,11 +11,10 @@ public class ServicePage extends BasePage {
 
     public ServicePage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
     }
 
     public ComplaintPage clickComplaintBtn() {
         clickButton(complaintBtn);
-        return PageFactory.initElements(driver, ComplaintPage.class);
+        return new ComplaintPage(driver);
     }
 }
