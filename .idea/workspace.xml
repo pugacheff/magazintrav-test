@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="481224ed-0264-4ee2-9a24-43859bc920b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageobjects/ItemPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/CheckItemCard.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/CheckItemCardSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/magazintravtest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/magazintravtest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/ComplaintPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/ComplaintPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/QuickViewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/QuickViewPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/ServicePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/ServicePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/SearchInputField.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/SearchInputField.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/UserRegistration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UserRegistration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/MainRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/MainRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/MasterHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/MasterHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/SearchInputFieldSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/SearchInputFieldSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/StepsLeaveComplaint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/StepsLeaveComplaint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="481224ed-0264-4ee2-9a24-43859bc920b5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
