@@ -32,7 +32,7 @@ public class ComplaintPage extends BasePage {
 
     public ComplaintPage(WebDriver driver) {
         super(driver);
-        this.drvier = driver;
+        this.driver = driver;
     }
 
     private ComplaintPage clickCauseCheckbox() {

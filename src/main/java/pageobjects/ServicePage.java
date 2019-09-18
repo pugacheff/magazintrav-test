@@ -12,11 +12,11 @@ public class ServicePage extends BasePage {
 
     public ServicePage(WebDriver driver) {
         super(driver);
-        this.drvier = driver;
+        this.driver = driver;
     }
 
     public ComplaintPage clickComplaintBtn() {
         clickButton(complaintBtn);
-        return PageFactory.initElements(drvier, ComplaintPage.class);
+        return PageFactory.initElements(driver, ComplaintPage.class);
     }
 }

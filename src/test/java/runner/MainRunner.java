@@ -7,7 +7,7 @@ import java.io.IOException;
 @CucumberOptions(
         features = "src/test/java/features"
         ,glue={"steps"}
-        }
+        ,plugin = { "pretty", "html:target/cucumber", "json:target/cucumber.json" }
         ,monochrome = false
 )
 

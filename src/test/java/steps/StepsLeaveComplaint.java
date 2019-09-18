@@ -10,9 +10,11 @@ import pageobjects.ServicePage;
 import tests.BaseTest;
 
 public class StepsLeaveComplaint extends BaseTest {
+
     HomePage homePage;
     ServicePage servicePage;
     ComplaintPage complaintPage;
+
     @Допустим("^пользователь находится на главной странице$")
     public void пользователь_находится_на_главной_странице() throws Throwable {
         driver.get("https://magazintrav.ru/");
