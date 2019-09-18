@@ -5,16 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-    protected WebDriver driver ;
+    protected WebDriver driver;
     protected WebDriverWait driverWait;
-    public JavascriptExecutor jse ;
-    public Select select ;
-    public Actions action ;
+    public JavascriptExecutor jse;
+    public Select select;
+    public Actions action;
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -41,6 +42,18 @@ public class BasePage {
 
     public void clearText(WebElement element) {
         element.clear();
+    }
+
+    public void waitInvisibilityOfElementLocated(WebElement element) {
+        driverWait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+    public void waitVisibilityOfElementLocated(WebElement element) {
+        driverWait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitElementToBeClickable(WebElement element) {
+        driverWait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
 }
