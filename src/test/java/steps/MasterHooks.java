@@ -1,8 +1,12 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.ru.Допустим;
+import cucumber.api.java.ru.Когда;
+import cucumber.api.java.ru.Тогда;
 import tests.BaseTest;
 import utils.Helper;
 
@@ -29,5 +33,4 @@ public class MasterHooks extends BaseTest {
             System.out.println("tearDown" + e.getMessage());
         }
     }
-
 }
