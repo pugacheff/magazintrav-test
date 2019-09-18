@@ -1,11 +1,8 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.ru.Допустим;
 import cucumber.api.java.ru.Когда;
 import cucumber.api.java.ru.Тогда;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import pageobjects.MainPage;
 import pageobjects.ThankPage;
 import tests.BaseTest;
