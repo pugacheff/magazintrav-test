@@ -24,6 +24,9 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//div[@class='head']//img[@alt='Магазин трав Русские Корни']")
     private WebElement imgHeaderIcons;
 
+    @FindBy(xpath = "//a[@href='#callbackmodal']")
+    private WebElement btnRequestCall;
+
     public MainPage(WebDriver driver) {
         super(driver);
     }
@@ -46,17 +49,26 @@ public class MainPage extends BasePage{
         return false;
     }
 
+    public PayOrderOnlinePage clickBtnPayForYourOrderOnline() {
+        btnPayForYourOrderOnline.click();
+        return new PayOrderOnlinePage(driver, driverWait);
+    }
+
+    public RequestCallPage clickRequestCall() {
+        btnRequestCall.click();
+        return new RequestCallPage(driver, driverWait);
+    }
+
+    public WebElement getBtnRequestCall() {
+        return btnRequestCall;
+    }
+
     public WebElement getBtnPayForYourOrderOnline() {
         return btnPayForYourOrderOnline;
     }
 
     public WebElement getImgHeaderIcons() {
         return imgHeaderIcons;
-    }
-
-    public PayOrderOnlinePage clickBtnPayForYourOrderOnline() {
-        btnPayForYourOrderOnline.click();
-        return new PayOrderOnlinePage(driver, driverWait);
     }
 
 }
