@@ -3,11 +3,15 @@ package pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
 public class MainPage extends BasePage{
+
+    @FindBy(xpath = "//div[@class='carousel_container topproducts']//div[1][@class='owl-item active']/div/a[2]")
+    private WebElement itemBtn;
 
     @FindBy(xpath = "//img[@alt='Высказать Благодарность']")
     private WebElement thankButton;
@@ -48,6 +52,11 @@ public class MainPage extends BasePage{
 
     public MainPage(WebDriver driver) {
         super(driver);
+    }
+
+    public ItemPage clickItemBtn() {
+        itemBtn.click();
+        return new ItemPage(driver);
     }
 
     public void typeWordForSearch(String word) {
@@ -106,5 +115,4 @@ public class MainPage extends BasePage{
         btnRequestCall.click();
         return new RequestCallPage(driver, driverWait);
     }
-
 }
