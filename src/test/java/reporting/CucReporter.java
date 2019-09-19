@@ -13,12 +13,12 @@ import java.util.List;
 public class CucReporter {
 
     public static void Report() {
-        File reportOutputDirectory = new File("src/test/cucumber-reporter");
+        File reportOutputDirectory = new File("target");
         List<String> jsonFiles = new ArrayList<>();
 
-
         File cucumberJson = new File("target/cucumber.json");
-        String absoluteCucumJson = cucumberJson.getAbsolutePath();
+        String absoluteCucumJson = cucumberJson.getAbsolutePath().replace("/", "\\\\");
+
         jsonFiles.add(absoluteCucumJson);
         String buildNumber = "1";
         String projectName = "cucumberProject";
