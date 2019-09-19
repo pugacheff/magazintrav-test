@@ -71,4 +71,5 @@ public class PayOrderOnlinePage extends BasePage {
     public WebElement getDivOnlinePayment() {
         return divOnlinePayment;
     }
+
 }

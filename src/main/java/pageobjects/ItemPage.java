@@ -52,4 +52,5 @@ public class ItemPage extends BasePage {
     public WebElement getItemAmountInputField() {
         return itemAmountInputField;
     }
+
 }

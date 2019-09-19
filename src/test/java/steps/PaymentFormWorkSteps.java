@@ -34,7 +34,6 @@ public class PaymentFormWorkSteps extends BaseTest {
     @Когда("^пользователь заполняет все поля ввода для оплаты онлан$")
     public void пользователь_заполняет_все_поля_ввода_для_оплаты_онлан() throws Throwable {
         testUser = TestUser.setDataUserRequestCall();
-
         payOrderOnlinePage.sendKeysFieldForm(testUser.getPhone(), testUser.getOrder());
     }
 

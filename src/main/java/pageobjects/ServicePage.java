@@ -17,4 +17,5 @@ public class ServicePage extends BasePage {
         clickButton(complaintBtn);
         return new ComplaintPage(driver);
     }
+
 }
