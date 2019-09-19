@@ -7,7 +7,7 @@ public class TestUser {
     private String phone;
     private String order;
 
-    public static TestUser setDataUserRequestCall() {
+    public static TestUser setDataUser() {
 
         TestUser testUser = new TestUser();
         testUser.setName("Василий");

@@ -27,7 +27,7 @@ public class RequestCallFormWorkSteps extends BaseTest {
 
     @Когда("^пользователь заполняет все поля ввода для заказа звонка$")
     public void пользователь_заполняет_все_поля_ввода_для_заказа_звонка() throws Throwable {
-        testUser = TestUser.setDataUserRequestCall();
+        testUser = TestUser.setDataUser();
         requestCallPage.sendKeysFieldFormCallBack(testUser.getName(), testUser.getEmail(), testUser.getPhone(), testUser.getOrder());
     }
 
