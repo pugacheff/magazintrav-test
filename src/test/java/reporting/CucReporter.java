@@ -13,7 +13,7 @@ import java.util.List;
 public class CucReporter {
 
     public static void Report() {
-        File reportOutputDirectory = new File("target/cucumber-reporter");
+        File reportOutputDirectory = new File("target");
         List<String> jsonFiles = new ArrayList<>();
 
         File cucumberJson = new File("target/cucumber.json");
